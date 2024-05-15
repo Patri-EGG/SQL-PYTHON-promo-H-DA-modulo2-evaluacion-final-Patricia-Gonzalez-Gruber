@@ -1,19 +1,19 @@
 # promo-Hedy-DA-modulo2-evaluacion-final-Patricia-Gonzalez-Patri-EGG(GitHub)
-Descripción del Proyecto
+Descripción del Proyecto:
 Este repositorio contiene mi trabajo para la evaluación final del Módulo 2, centrado en SQL, del curso de Análisis de Datos de Adalab. En este módulo, utilizamos la base de datos Sakila para desarrollar y demostrar nuestras habilidades en la ejecución de consultas SQL, manejo de datos y análisis de resultados.
 
-Objetivos
+Objetivos:
 Demostrar la competencia en el uso de consultas SQL básicas y avanzadas.
 Aplicar técnicas de análisis de datos para resolver problemas complejos utilizando la base de datos Sakila.
 Prepararse para una revisión técnica similar a una entrevista de trabajo, donde defenderé y explicaré las decisiones tomadas en las consultas y análisis realizados.
-Ejercicios Realizados
+Ejercicios Realizados:
 Los siguientes son algunos de los ejercicios incluidos en este repositorio:
 
 Consulta de Películas Únicas: Seleccionar todos los nombres de películas sin duplicados.
 Películas por Clasificación: Muestra los nombres de películas con clasificación "PG-13".
 Actores y Duraciones Específicas: Encuentra actores con el apellido "Gibson" y películas con duración mayor a 120 minutos.
 
-Herramientas y Tecnologías Usadas
+Herramientas y Tecnologías Usadas:
 MySQLworkbench: Para todas las consultas y manipulaciones de datos. 
 GitHub: Para el versionado y gestión del código.
 
