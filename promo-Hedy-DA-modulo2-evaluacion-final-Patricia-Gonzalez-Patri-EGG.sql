@@ -10,7 +10,7 @@ JOIN inventory as i ON f.film_id = i.film_id;   -- Usamos la tabla inventory par
 -- 2. Muestra los nombres de todas las películas que tengan una clasificación de "PG-13".
 
 SELECT DISTINCT
-    (f.title), f.rating
+    (f.title), f.rating -- seleccionamos'f.rating' para verificar resultados
 FROM
     film AS f
         JOIN
@@ -35,7 +35,7 @@ ORDER BY f.title;-- Ordenamos por titulo para ver la información de forma más 
 
 -- 4. Encuentra el título de todas las películas que tengan una duración mayor a 120 minutos.
 SELECT DISTINCT
-	(f.title), f.length
+	(f.title), f.length   -- seleccionamos 'f.length' para verificar resultados.
 FROM
     film AS f
         JOIN
@@ -146,7 +146,7 @@ FROM
 WHERE
     f.title = 'Indian Love';
     
-    -- 14. Muestra el título de todas las películas que contengan la palabra "dog" o "cat" en su descripción.
+-- 14. Muestra el título de todas las películas que contengan la palabra "dog" o "cat" en su descripción.
     
 SELECT DISTINCT
     f.title AS titulo_dog_cat, f.description -- Seleciono f.description para comprobar resultados.
@@ -155,7 +155,7 @@ FROM
         JOIN
     film AS f ON f.film_id = i.film_id
 WHERE
-    f.description LIKE '%dog%' OR '%cat%';
+    f.description LIKE '%dog%' OR f.description LIKE '%cat%';
     
 -- 15. Hay algún actor o actriz que no aparezca en ninguna película en la tabla film_actor.
     
@@ -163,7 +163,7 @@ SELECT
     a.actor_id
 FROM
     actor AS a
-        LEFT JOIN
+        LEFT JOIN   -- LEFT JOIN para combinar la tabla 'actor' con 'film_actor' aunque no hayan coincidencias. 'JOIN' solo devolveria filas cuando hay una coincidencia en ambas tablas. 
     film_actor AS fa ON fa.actor_id = a.actor_id
 WHERE					 -- Uso de  'IS NULL' porque buscamos ids que no aparezcan en la tabla film_actor
     fa.actor_id IS NULL; -- Esta consulta devuelve '0 Filas', lo que significa que todos los actores en la tabla 'actor' aparecen en la tabla 'film_actor'.
@@ -242,7 +242,8 @@ FROM
 		JOIN
 	inventory as i ON i.film_id = fa.film_id -- Opcional. En este caso devuelve el mismo número de resultados.
 GROUP BY CONCAT(a.first_name, ' ', a.last_name)
-HAVING COUNT(fa.actor_id) >= 5;
+HAVING COUNT(fa.actor_id) >= 5
+ORDER BY num_peliculas DESC;  -- Ordenamos para ver los actores que aparecen en más peliculas primero.
 
 -- 22. Encuentra el título de todas las películas que fueron alquiladas por más de 5 días. Utiliza una subconsulta 
 -- para encontrar los rental_ids con una duración superior a 5 días y luego selecciona las películas correspondientes.
@@ -311,50 +312,3 @@ HAVING num_peliculas > 0 -- Aseguramos que los actores han coincidido en la mism
 ORDER BY num_peliculas DESC; -- ordenamos para mostrar las parejas que han coincidido más veces primero.
 
 
-
-
-
-
-                        
-
-
-					
-
-
-
-
-
-    
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-SELECT DISTINCT -- Selecciono 'c.name' para verificar resultados y  DISTINCT para que no se repitan nombres al comparar con la tabla inventary.     f.title AS titulos_family, c.name FROM     film AS f         JOIN     film_category AS fc ON fc.film_id = f.film_id         JOIN     category AS c ON fc.category_id = c.category_id         JOIN     inventory AS i ON i.film_id = f.film_id -- Verificamos inventario, de los contrario nos traería 69 filas en véz de 67. WHERE     c.name = 'Family' LIMIT 0, 1000

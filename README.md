@@ -1,5 +1,26 @@
-# promo-Hedy-DA-modulo2-evaluacion-final-Patricia-Gonzalez-Patri-EGG-
+# promo-Hedy-DA-modulo2-evaluacion-final-Patricia-Gonzalez-Patri-EGG(GitHub)
+Descripción del Proyecto
+Este repositorio contiene mi trabajo para la evaluación final del Módulo 2, centrado en SQL, del curso de Análisis de Datos de Adalab. En este módulo, utilizamos la base de datos Sakila para desarrollar y demostrar nuestras habilidades en la ejecución de consultas SQL, manejo de datos y análisis de resultados.
 
+Objetivos
+Demostrar la competencia en el uso de consultas SQL básicas y avanzadas.
+Aplicar técnicas de análisis de datos para resolver problemas complejos utilizando la base de datos Sakila.
+Prepararse para una revisión técnica similar a una entrevista de trabajo, donde defenderé y explicaré las decisiones tomadas en las consultas y análisis realizados.
+Ejercicios Realizados
+Los siguientes son algunos de los ejercicios incluidos en este repositorio:
+
+Consulta de Películas Únicas: Seleccionar todos los nombres de películas sin duplicados.
+Películas por Clasificación: Muestra los nombres de películas con clasificación "PG-13".
+Actores y Duraciones Específicas: Encuentra actores con el apellido "Gibson" y películas con duración mayor a 120 minutos.
+
+Herramientas y Tecnologías Usadas
+MySQLworkbench: Para todas las consultas y manipulaciones de datos. 
+GitHub: Para el versionado y gestión del código.
+
+Notas: He usado la herramienta format+'Beautify Query' para hacer las consultas más leíbles.La mayoría de las consultas toman en cuenta el inventario. Lo que devolverá consultas solo sobre titulos disponibles, lo cuál es más realista (en mi opinión).
+
+
+-------------------------------------------------------------------------------------------
 Ejercicio Final Módulo 2
 - Antes de empezar, hay que crear un nuevo repositorio en GitHub.
 - Esta evaluación consta de una serie de preguntas que evalúan tu comprensión y habilidades en
@@ -60,5 +81,5 @@ SQL
 Otros criterios a tener en cuenta
 - Usar inglés para nombres de variables, funciones, clases, mensajes de commit, nombres de ficheros.
 - El repositorio de GitHub debe tener README explicando muy brevemente cómo arrancar el proyecto.
-¡Al turrón!
+
  
